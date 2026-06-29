@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Googleマップ集客完全攻略マニュアル｜鍼灸院MEO実践大全</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#fdfbf7;color:#1a1814;font-family:'Noto Sans JP',sans-serif;font-size:15px;line-height:1.85;-webkit-text-size-adjust:100%;word-break:break-word;}
+:root{
+  --ink:#1a1814;--ink2:#3d3830;--ink3:#6b6358;
+  --gold:#b8924a;--gold-light:#e8d5b0;--gold-pale:#faf5ec;
+  --rule:#d4c9b8;--bg:#fdfbf7;--white:#fff;
+  --accent:#1f3d5c;--accent-light:#e8eef4;
+  --success:#2d6a4f;--success-light:#e8f5ee;
+}
+/* HERO */
+.hero{background:var(--accent);color:#fff;padding:clamp(44px,8vw,80px) clamp(16px,5vw,24px) clamp(36px,6vw,72px);text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.015) 40px,rgba(255,255,255,.015) 41px);}
+.hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:14px;}
+.hero-title{font-family:'Noto Serif JP',serif;font-size:clamp(22px,5.5vw,48px);font-weight:700;line-height:1.35;margin-bottom:10px;}
+.hero-sub{font-family:'Noto Serif JP',serif;font-size:clamp(13px,3vw,20px);color:var(--gold-light);margin-bottom:24px;}
+.hero-rule{width:48px;height:2px;background:var(--gold);margin:0 auto 22px;}
+.hero-desc{max-width:560px;margin:0 auto;font-size:clamp(12px,2.5vw,14px);color:rgba(255,255,255,.75);line-height:1.9;}
+/* BADGE */
+.badge-bar{background:var(--gold);padding:10px clamp(12px,3vw,24px);display:flex;justify-content:center;gap:clamp(8px,2.5vw,28px);flex-wrap:wrap;}
+.badge-item{color:#fff;font-size:clamp(10px,2.2vw,12px);font-weight:700;letter-spacing:.04em;display:flex;align-items:center;gap:4px;}
+.badge-item::before{content:'✦';font-size:9px;}
+/* TOC */
+.toc-wrap{max-width:860px;margin:clamp(28px,5vw,56px) auto;padding:0 clamp(14px,4vw,24px);}
+.toc-box{border:1px solid var(--rule);background:#fff;padding:clamp(18px,4vw,36px) clamp(16px,4vw,40px);}
+.toc-title{font-family:'Noto Serif JP',serif;font-size:11px;font-weight:600;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--rule);}
+.toc-list{list-style:none;}
+.toc-list li{padding:4px 0;border-bottom:1px dotted var(--rule);}
+.toc-list li:last-child{border-bottom:none;}
+.toc-list a{color:var(--ink2);text-decoration:none;font-size:clamp(12px,2.5vw,14px);display:flex;align-items:baseline;gap:8px;padding:3px 0;-webkit-tap-highlight-color:rgba(184,146,74,.15);}
+.toc-list a:hover,.toc-list a:active{color:var(--gold);}
+.toc-num{font-family:'DM Serif Display',serif;font-size:11px;color:var(--gold);min-width:40px;font-style:italic;flex-shrink:0;}
+/* MAIN */
+.main{max-width:860px;margin:0 auto;padding:0 clamp(14px,4vw,24px) clamp(48px,8vw,80px);}
+/* CHAPTER */
+.chapter{margin-bottom:clamp(44px,7vw,72px);padding-bottom:clamp(44px,7vw,72px);border-bottom:1px solid var(--rule);}
+.chapter:last-child{border-bottom:none;}
+.chapter-header{display:flex;align-items:flex-start;gap:clamp(10px,2.5vw,24px);margin-bottom:clamp(22px,4vw,36px);padding-bottom:clamp(16px,3vw,28px);border-bottom:2px solid var(--ink);}
+.chapter-num{font-family:'DM Serif Display',serif;font-size:clamp(44px,9vw,72px);line-height:1;color:var(--gold);font-style:italic;min-width:clamp(44px,9vw,70px);margin-top:-5px;flex-shrink:0;}
+.chapter-label{font-size:10px;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:3px;}
+.chapter-title{font-family:'Noto Serif JP',serif;font-size:clamp(15px,3.5vw,24px);font-weight:700;line-height:1.45;color:var(--ink);}
+/* MEO BOX */
+.meo-intro-box{background:var(--accent);color:#fff;padding:clamp(20px,4vw,40px);margin-bottom:clamp(28px,5vw,48px);position:relative;}
+.meo-intro-box::before{content:'NEW';position:absolute;top:-1px;right:clamp(12px,3vw,24px);background:var(--gold);color:#fff;font-size:10px;font-weight:700;letter-spacing:.15em;padding:3px 9px;}
+.meo-h{font-family:'Noto Serif JP',serif;font-size:clamp(16px,3.5vw,20px);font-weight:700;color:#fff;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.2);margin-bottom:16px;}
+.meo-h2{font-family:'Noto Serif JP',serif;font-size:clamp(14px,3vw,17px);font-weight:700;color:#fff;margin:22px 0 11px;}
+.meo-p{font-size:clamp(12px,2.5vw,14px);line-height:1.9;color:rgba(255,255,255,.88);margin-bottom:12px;}
+.meo-p strong{color:var(--gold-light);font-weight:700;}
+/* TABLE SCROLL WRAPPER */
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;}
+.compare-table{width:100%;min-width:380px;border-collapse:collapse;font-size:clamp(11px,2.3vw,13px);}
+.compare-table th{background:rgba(255,255,255,.12);color:var(--gold-light);font-weight:700;padding:9px 10px;text-align:center;border:1px solid rgba(255,255,255,.15);}
+.compare-table th.hl{background:var(--gold);color:#fff;}
+.compare-table td{padding:8px 10px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.85);vertical-align:middle;}
+.compare-table td:first-child{background:rgba(255,255,255,.06);font-weight:700;color:rgba(255,255,255,.7);font-size:clamp(10px,2vw,12px);white-space:nowrap;}
+.compare-table td.best{color:var(--gold-light);font-weight:700;}
+/* REASON GRID */
+.reason-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:16px 0;}
+.reason-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:14px 12px;}
+.reason-num{font-family:'DM Serif Display',serif;font-size:26px;color:var(--gold);font-style:italic;line-height:1;margin-bottom:5px;}
+.reason-label{font-size:clamp(11px,2.3vw,13px);font-weight:700;color:#fff;margin-bottom:5px;}
+.reason-desc{font-size:clamp(10px,2vw,12px);color:rgba(255,255,255,.7);line-height:1.7;}
+.meo-summary{background:rgba(184,146,74,.2);border-left:3px solid var(--gold);padding:11px 14px;margin-top:16px;font-size:clamp(11px,2.3vw,13px);color:rgba(255,255,255,.9);line-height:1.8;}
+/* HEADINGS */
+.sec-h2{font-family:'Noto Serif JP',serif;font-size:clamp(15px,3.5vw,20px);font-weight:700;color:var(--ink);margin:clamp(26px,5vw,40px) 0 13px;padding-bottom:9px;border-bottom:1px solid var(--rule);position:relative;}
+.sec-h2::before{content:'';position:absolute;left:0;bottom:-1px;width:34px;height:2px;background:var(--gold);}
+.sec-h3{font-family:'Noto Serif JP',serif;font-size:clamp(13px,2.8vw,16px);font-weight:600;color:var(--ink);margin:18px 0 8px;}
+/* BODY */
+.body-text{font-size:clamp(13px,2.5vw,14px);line-height:1.95;color:var(--ink2);margin-bottom:12px;}
+.body-text strong{color:var(--ink);font-weight:700;}
+/* BOXES */
+.highlight-box{background:var(--gold-pale);border:1px solid var(--gold-light);border-left:4px solid var(--gold);padding:clamp(12px,3vw,18px) clamp(12px,3vw,22px);margin:16px 0;font-size:clamp(12px,2.5vw,14px);line-height:1.9;color:var(--ink2);}
+.success-box{background:var(--success-light);border-left:4px solid var(--success);padding:clamp(12px,3vw,18px) clamp(12px,3vw,22px);margin:16px 0;font-size:clamp(12px,2.5vw,14px);line-height:1.9;color:var(--ink2);}
+.warn-box{background:#fff5f5;border-left:4px solid #c0392b;padding:clamp(10px,2.5vw,16px) clamp(10px,2.5vw,20px);margin:12px 0;font-size:clamp(12px,2.3vw,13px);line-height:1.9;color:var(--ink2);}
+.case-box{background:var(--accent-light);border:1px solid #c5d5e5;border-left:4px solid var(--accent);padding:clamp(10px,2.5vw,16px) clamp(10px,2.5vw,20px);margin:12px 0;font-size:clamp(12px,2.3vw,13px);line-height:1.9;color:var(--ink2);}
+.case-box strong{color:var(--accent);font-weight:700;}
+.sheet-box{background:#fff;border:2px dashed var(--rule);padding:clamp(14px,3vw,20px) clamp(14px,3vw,24px);margin:14px 0;font-size:clamp(12px,2.3vw,13px);line-height:2.2;color:var(--ink2);}
+/* FLOW STEPS */
+.flow-steps{display:flex;flex-direction:column;gap:0;margin:16px 0;}
+.flow-step{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--rule);}
+.flow-step:last-child{border-bottom:none;}
+.flow-icon{width:30px;height:30px;min-width:30px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:13px;font-style:italic;flex-shrink:0;}
+.flow-text{font-size:clamp(12px,2.5vw,14px);color:var(--ink2);}
+/* LISTS */
+.checklist{list-style:none;margin:10px 0;}
+.checklist li{padding:7px 0 7px 24px;border-bottom:1px dotted var(--rule);font-size:clamp(12px,2.5vw,14px);color:var(--ink2);position:relative;}
+.checklist li:last-child{border-bottom:none;}
+.checklist li::before{content:'□';position:absolute;left:0;color:var(--gold);font-size:14px;}
+.num-list{list-style:none;margin:10px 0;counter-reset:item;}
+.num-list li{counter-increment:item;padding:9px 0 9px 38px;border-bottom:1px dotted var(--rule);font-size:clamp(12px,2.5vw,14px);color:var(--ink2);position:relative;}
+.num-list li:last-child{border-bottom:none;}
+.num-list li::before{content:counter(item);position:absolute;left:0;top:7px;width:24px;height:24px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.dot-list{list-style:none;margin:8px 0;}
+.dot-list li{padding:4px 0 4px 17px;font-size:clamp(12px,2.5vw,14px);color:var(--ink2);position:relative;}
+.dot-list li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:10px;top:6px;}
+/* STAT GRID */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin:16px 0;}
+.stat-card{background:#fff;border:1px solid var(--rule);padding:clamp(12px,2.5vw,18px);text-align:center;}
+.stat-num{font-family:'DM Serif Display',serif;font-size:clamp(18px,4.5vw,26px);color:var(--gold);font-style:italic;line-height:1;margin-bottom:4px;}
+.stat-label{font-size:clamp(10px,2vw,12px);color:var(--ink3);font-weight:500;}
+/* TEMPLATE BOX */
+.template-box{background:#fff;border:1px solid var(--rule);padding:clamp(16px,3vw,22px) clamp(12px,3vw,20px) clamp(12px,3vw,18px);margin:13px 0;position:relative;}
+.template-label{position:absolute;top:-1px;left:0;background:var(--ink);color:#fff;font-size:10px;font-weight:700;letter-spacing:.08em;padding:3px 9px;}
+.template-body{font-size:clamp(11px,2.3vw,13px);line-height:1.95;color:var(--ink2);margin-top:6px;white-space:pre-wrap;overflow-wrap:break-word;}
+/* RULE TABLE */
+.rule-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0;}
+.rule-table{width:100%;min-width:320px;border-collapse:collapse;font-size:clamp(11px,2.3vw,13px);}
+.rule-table th{background:var(--ink);color:#fff;padding:9px 11px;text-align:left;font-weight:700;}
+.rule-table td{padding:8px 11px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:top;}
+.rule-table tr:nth-child(even) td{background:var(--gold-pale);}
+/* APPENDIX */
+.appendix-header{background:var(--ink);color:#fff;padding:clamp(20px,4vw,30px) clamp(18px,4vw,36px);margin-bottom:clamp(22px,4vw,32px);}
+.appendix-eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
+.appendix-title{font-family:'Noto Serif JP',serif;font-size:clamp(16px,4vw,22px);font-weight:700;}
+/* FOOTER */
+.footer{background:var(--ink);color:rgba(255,255,255,.5);text-align:center;padding:clamp(26px,5vw,40px) clamp(16px,4vw,24px);font-size:clamp(10px,2vw,12px);letter-spacing:.04em;}
+.footer-gold{color:var(--gold);font-family:'Noto Serif JP',serif;font-size:clamp(13px,3vw,16px);display:block;margin-bottom:8px;}
+.footer-copy{margin-top:10px;font-size:clamp(11px,2.5vw,13px);color:rgba(255,255,255,.65);}
+/* RESPONSIVE */
+@media(max-width:480px){
+  .reason-grid{grid-template-columns:1fr;}
+  .stat-grid{grid-template-columns:repeat(2,1fr);}
+  .meo-intro-box::before{right:12px;}
+}
+@media(min-width:481px) and (max-width:768px){
+  .reason-grid{grid-template-columns:repeat(2,1fr);}
+  .stat-grid{grid-template-columns:repeat(3,1fr);}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <p class="hero-eyebrow">完全攻略マニュアル</p>
+  <h1 class="hero-title">Googleマップ集客<br>鍼灸院MEO実践大全</h1>
+  <p class="hero-sub">毎月10〜30人の新患を集める再現性の高い戦略</p>
+  <div class="hero-rule"></div>
+  <p class="hero-desc">正しい順番で積み上げれば、ほぼ再現性がある。特別な才能も、特別な技術も必要ない。必要なのは正しい知識と継続だけです。</p>
+</header>
+
+<div class="badge-bar">
+  <span class="badge-item">全8章構成</span>
+  <span class="badge-item">別冊特典3点付き</span>
+  <span class="badge-item">口コミ返信テンプレ100選</span>
+  <span class="badge-item">投稿ネタ365日大全</span>
+</div>
+
+<div class="toc-wrap">
+  <div class="toc-box">
+    <p class="toc-title">目次</p>
+    <ul class="toc-list">
+      <li><a href="#ch1"><span class="toc-num">Ch.1</span>Googleマップから毎月10〜30人の新患を集める全体像</a></li>
+      <li><a href="#ch2"><span class="toc-num">Ch.2</span>患者が予約したくなるGoogleビジネスプロフィール構築術</a></li>
+      <li><a href="#ch3"><span class="toc-num">Ch.3</span>新患が集まるキーワード戦略と専門院ポジショニング</a></li>
+      <li><a href="#ch4"><span class="toc-num">Ch.4</span>月20件以上の口コミを集める仕組み化マニュアル</a></li>
+      <li><a href="#ch5"><span class="toc-num">Ch.5</span>患者が予約したくなる写真戦略と投稿運用大全</a></li>
+      <li><a href="#ch6"><span class="toc-num">Ch.6</span>地域No.1院が実践する競合分析と順位改善戦略</a></li>
+      <li><a href="#ch7"><span class="toc-num">Ch.7</span>数字管理とインサイト分析</a></li>
+      <li><a href="#ch8"><span class="toc-num">Ch.8</span>90日実践ロードマップと院長チェックリスト</a></li>
+      <li><a href="#bonus1"><span class="toc-num">別冊①</span>口コミ依頼LINEテンプレート20選</a></li>
+      <li><a href="#bonus2"><span class="toc-num">別冊②</span>口コミ返信テンプレート100選</a></li>
+      <li><a href="#bonus3"><span class="toc-num">別冊③</span>Googleマップ投稿ネタ365日大全</a></li>
+    </ul>
+  </div>
+</div>
+
+<main class="main">
+
+<!-- ===== CH1 ===== -->
+<section class="chapter" id="ch1">
+  <div class="chapter-header">
+    <div class="chapter-num">1</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter One</p>
+      <h2 class="chapter-title">Googleマップから毎月10〜30人の<br>新患を集める全体像</h2>
+    </div>
+  </div>
+
+  <!-- MEO追加セクション -->
+  <div class="meo-intro-box">
+    <h3 class="meo-h">MEOとは何か？</h3>
+    <p class="meo-p"><strong>MEO（Map Engine Optimization：マップエンジン最適化）</strong>とは、Googleマップ上で自院を上位に表示させ、新患を集めるための施策です。</p>
+    <p class="meo-p">似た言葉に「SEO（Search Engine Optimization）」があります。SEOはGoogleの通常検索結果（青いリンクが並ぶ画面）での表示順位を上げる施策ですが、MEOはその上部に表示される<strong>「Googleマップの上位3枠（ローカルパック）」</strong>を攻略する施策です。</p>
+    <table class="compare-table">
+      <thead>
+        <tr><th></th><th>SEO</th><th class="hl">MEO ← 今回の対象</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>正式名称</td><td>検索エンジン最適化</td><td class="best">マップエンジン最適化</td></tr>
+        <tr><td>表示場所</td><td>Google通常検索結果</td><td class="best">Googleマップの上位3枠</td></tr>
+        <tr><td>費用</td><td>無料〜（専門家依頼は有料）</td><td class="best">無料で運用可能</td></tr>
+        <tr><td>成果まで</td><td>数ヶ月〜1年以上</td><td class="best">比較的早期に効果が出やすい</td></tr>
+        <tr><td>地域集客</td><td>△ 広範囲向け</td><td class="best">◎ 地域密着型に最適</td></tr>
+      </tbody>
+    </table>
+    <h3 class="meo-h2">なぜ鍼灸院にMEOが最も有効なのか？</h3>
+    <div class="reason-grid">
+      <div class="reason-card"><div class="reason-num">①</div><div class="reason-label">患者は地域名＋症状で探す</div><div class="reason-desc">「新宿 不眠」のように検索する患者がほとんど。Googleマップが最初に表示される。</div></div>
+      <div class="reason-card"><div class="reason-num">②</div><div class="reason-label">完全無料で運用できる</div><div class="reason-desc">Googleビジネスプロフィールへの登録・運用は無料。広告費ゼロで新患を集められる。</div></div>
+      <div class="reason-card"><div class="reason-num">③</div><div class="reason-label">再現性が高い</div><div class="reason-desc">正しい順番で積み上げれば、ほぼどの院でも成果が出やすい。特別な才能は不要。</div></div>
+    </div>
+    <div class="meo-summary">📌 <strong>まとめ：</strong>MEOとは「Googleマップで自院を見つけてもらい、予約につなげるための仕組みづくり」です。このマニュアルでは、その具体的な方法をステップごとに解説していきます。</div>
+  </div>
+
+  <h3 class="sec-h2">はじめに</h3>
+  <p class="body-text">多くの鍼灸院の先生は、集客に悩むとまず技術を磨こうとします。新しい技術セミナーに参加し、新しい治療法を学び、資格を取得し、知識を増やします。もちろんそれ自体は素晴らしいことです。</p>
+  <p class="body-text">しかし残念ながら、患者さんは「技術がある院」に来るわけではありません。患者さんは<strong>「自分の悩みを解決してくれそうな院」</strong>に来ます。ここを理解することが、Googleマップ集客成功の第一歩です。</p>
+
+  <h3 class="sec-h2">なぜ今Googleマップなのか？</h3>
+  <p class="body-text">10年前と今では、患者さんの行動が大きく変わりました。昔は、知人紹介→ホームページ検索→来院、という流れでした。しかし今は違います。多くの患者さんは、まずスマホを開きます。そして検索します。</p>
+  <div class="highlight-box">「渋谷 鍼灸院」「新宿 不眠」「池袋 美容鍼」「横浜 自律神経」<br><br>すると何が出てくるでしょうか？ホームページではありません。<strong>Googleマップです。</strong><br><br>つまり、患者さんは、院を探しているのではなく、<strong>場所と解決策を探している</strong>のです。</div>
+
+  <h3 class="sec-h2">患者は何を見ているのか？</h3>
+  <p class="body-text">患者さんはGoogleマップを開いた時、何を見ていると思いますか？多くの院長は「順位」と答えます。しかし患者は違います。患者が見ている順番は以下の通りです。</p>
+  <ul class="num-list">
+    <li>口コミ</li><li>写真</li><li>評価</li><li>専門性</li><li>ホームページ</li>
+  </ul>
+  <p class="body-text">つまり、順位が1位だから来るわけではありません。口コミが少なく、写真も少なく、何が得意かわからない院は、たとえ上位表示されても予約されません。</p>
+
+  <h3 class="sec-h2">MEOで成果が出ない院の特徴</h3>
+  <p class="body-text">私は数多くの治療院の集客事例を分析してきました。成果が出ない院には共通点があります。</p>
+  <ul class="dot-list">
+    <li>とりあえず登録しただけ</li>
+    <li>口コミが10件以下</li>
+    <li>写真が少ない</li>
+    <li>専門性がない</li>
+    <li>投稿していない</li>
+    <li>数字を見ていない</li>
+  </ul>
+  <p class="body-text">つまり、<strong>運用していない</strong>のです。Googleビジネスプロフィールは、登録して終わりではありません。<strong>育てるもの</strong>です。</p>
+
+  <h3 class="sec-h2">Googleが評価している3つの要素</h3>
+  <p class="body-text">Googleは公式に、以下の3要素を重視すると公表しています。</p>
+  <ul class="num-list">
+    <li><strong>関連性</strong>：患者が検索した内容と、先生の院がどれだけ一致しているか。例えば「新宿 不眠」と検索した場合、不眠の情報が豊富な院は有利になります。</li>
+    <li><strong>距離</strong>：患者との距離です。これは変えられません。しかし近隣患者を獲得することはできます。</li>
+    <li><strong>知名度</strong>：口コミ・写真・投稿・ホームページなどの総合評価です。実はここが最も改善しやすい部分です。</li>
+  </ul>
+
+  <h3 class="sec-h2">集客の順番を間違えない</h3>
+  <p class="body-text">多くの院が失敗する理由は、順番を間違えるからです。例えば、投稿を頑張る→口コミは放置→写真も少ない→予約が増えない、これは当然です。家を建てる時も、屋根から作りません。土台から作ります。MEOも同じです。</p>
+  <div class="sec-h3">正しい順番</div>
+  <div class="flow-steps">
+    <div class="flow-step"><div class="flow-icon">1</div><div class="flow-text">プロフィール完成</div></div>
+    <div class="flow-step"><div class="flow-icon">2</div><div class="flow-text">専門性設計</div></div>
+    <div class="flow-step"><div class="flow-icon">3</div><div class="flow-text">口コミ獲得</div></div>
+    <div class="flow-step"><div class="flow-icon">4</div><div class="flow-text">写真強化</div></div>
+    <div class="flow-step"><div class="flow-icon">5</div><div class="flow-text">投稿運用</div></div>
+    <div class="flow-step"><div class="flow-icon">6</div><div class="flow-text">数字改善</div></div>
+  </div>
+
+  <h3 class="sec-h2">MEOの最終目的</h3>
+  <p class="body-text">忘れてはいけないことがあります。MEOの目的は、「上位表示」ではありません。目的は、<strong>新患獲得</strong>です。ここを履き違えないでください。</p>
+  <div class="highlight-box">順位1位 → 予約ゼロ　では意味がありません。<br>逆に、順位3位 → 毎月20人来院　なら成功です。<br>常に<strong>「予約が増えているか」</strong>を基準に考えましょう。</div>
+
+  <h3 class="sec-h2">Googleマップ集客成功の全体像</h3>
+  <p class="body-text">成功する院は例外なく以下の状態を作っています。</p>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">100+</div><div class="stat-label">口コミ件数以上</div></div>
+    <div class="stat-card"><div class="stat-num">200+</div><div class="stat-label">写真枚数以上</div></div>
+    <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">口コミ返信率</div></div>
+    <div class="stat-card"><div class="stat-num">週1〜2</div><div class="stat-label">投稿頻度</div></div>
+    <div class="stat-card"><div class="stat-num">専門性</div><div class="stat-label">が明確</div></div>
+    <div class="stat-card"><div class="stat-num">数字</div><div class="stat-label">管理実施</div></div>
+  </div>
+  <p class="body-text">特別な裏技はありません。地味なことを積み上げています。</p>
+
+  <div class="success-box"><strong>第1章まとめ</strong><br>Googleマップ集客は、魔法ではありません。正しい順番で積み上げれば、ほぼ再現性があります。そして最初にやるべきことは、Googleビジネスプロフィールの完成度を高めることです。次章では、患者が予約したくなるGoogleビジネスプロフィールの作り方を解説します。</div>
+</section>
+
+<!-- ===== CH2 ===== -->
+<section class="chapter" id="ch2">
+  <div class="chapter-header">
+    <div class="chapter-num">2</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Two</p>
+      <h2 class="chapter-title">患者が予約したくなる<br>Googleビジネスプロフィール構築術</h2>
+    </div>
+  </div>
+
+  <h3 class="sec-h2">なぜプロフィールが重要なのか？</h3>
+  <p class="body-text">Googleビジネスプロフィールは<strong>24時間働く営業マン</strong>です。先生が寝ている間も、休みの日も、患者さんに情報を届けています。しかし多くの院は、営業マンを放置しています。院名だけ登録・写真数枚・説明文なし・サービス未設定——これでは予約されません。</p>
+
+  <h3 class="sec-h2">患者がプロフィールを見る流れ</h3>
+  <p class="body-text">患者さんはGoogleマップを開き、約30秒以内に判断します。</p>
+  <ul class="dot-list">
+    <li>この院は信頼できそうか</li>
+    <li>自分の症状に対応しているか</li>
+    <li>通いやすそうか</li>
+    <li>先生は優しそうか</li>
+  </ul>
+  <p class="body-text">その結果、予約するか決めます。</p>
+
+  <h3 class="sec-h2">院名設定</h3>
+  <p class="body-text">まず院名です。基本は<strong>正式名称のみ</strong>です。Googleガイドライン違反になるため、無理にキーワードを詰め込まないでください。</p>
+  <div class="warn-box">❌ 悪い例：新宿自律神経専門鍼灸院〇〇<br>✅ 良い例：鍼灸院〇〇<br><br>長期的にはこちらが安全です。</div>
+
+  <h3 class="sec-h2">カテゴリー設定</h3>
+  <p class="body-text">Googleはカテゴリーで何の院かを判断しています。基本は<strong>鍼灸院</strong>です。</p>
+  <p class="body-text">サブカテゴリー候補：整体院／スポーツマッサージ／代替医療など。実態のあるものだけ登録してください。</p>
+
+  <h3 class="sec-h2">説明文の作り方</h3>
+  <p class="body-text">説明文は非常に重要です。テンプレートがあります。</p>
+  <div class="flow-steps">
+    <div class="flow-step"><div class="flow-icon">1</div><div class="flow-text">地域名</div></div>
+    <div class="flow-step"><div class="flow-icon">2</div><div class="flow-text">得意症状</div></div>
+    <div class="flow-step"><div class="flow-icon">3</div><div class="flow-text">施術方針</div></div>
+    <div class="flow-step"><div class="flow-icon">4</div><div class="flow-text">特徴</div></div>
+    <div class="flow-step"><div class="flow-icon">5</div><div class="flow-text">予約案内</div></div>
+  </div>
+  <div class="template-box">
+    <span class="template-label">説明文の例</span>
+    <div class="template-body">当院は新宿駅徒歩3分にある鍼灸院です。
+不眠、自律神経の乱れ、頭痛、肩こりなどのお悩みに対応しております。
+国家資格保有者が一人ひとりのお身体の状態を確認しながら施術を行います。
+完全予約制のため落ち着いた環境で施術を受けていただけます。</div>
+  </div>
+
+  <h3 class="sec-h2">サービス登録</h3>
+  <p class="body-text">ここは多くの院が見落としています。「鍼灸施術」だけでは弱いです。</p>
+  <ul class="dot-list">
+    <li>不眠改善鍼灸</li><li>自律神経調整鍼灸</li><li>頭痛改善鍼灸</li><li>美容鍼</li><li>小顔美容鍼</li><li>リフトアップ美容鍼</li>
+  </ul>
+  <p class="body-text">など細かく登録します。</p>
+
+  <h3 class="sec-h2">写真戦略</h3>
+  <p class="body-text">プロフィール構築で最も重要なのが写真です。患者は技術を見ているのではありません。<strong>安心感を見ています。</strong></p>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">50枚</div><div class="stat-label">最低必要</div></div>
+    <div class="stat-card"><div class="stat-num">100枚</div><div class="stat-label">推奨</div></div>
+    <div class="stat-card"><div class="stat-num">300枚</div><div class="stat-label">理想</div></div>
+  </div>
+  <p class="body-text">掲載すべき写真：外観／受付／待合室／施術室／院長／スタッフ／施術風景／患者写真／設備／衛生管理</p>
+
+  <h3 class="sec-h2">予約導線</h3>
+  <p class="body-text">予約しやすさは非常に重要です。理想は Googleマップ → LINE予約 → 完了 です。複雑な導線は離脱します。</p>
+
+  <h3 class="sec-h2">開設初日のチェックリスト</h3>
+  <ul class="checklist">
+    <li>オーナー確認完了</li><li>カテゴリー設定</li><li>説明文作成</li><li>サービス登録</li><li>営業時間設定</li><li>電話番号登録</li><li>URL登録</li><li>写真50枚</li><li>ロゴ設定</li><li>カバー画像設定</li>
+  </ul>
+
+  <div class="success-box"><strong>第2章まとめ</strong><br>MEOで成果を出したいなら、まずプロフィールを完成させること。ここを飛ばして口コミ・投稿・分析を始めても成果は出ません。まずは患者さんから見て「安心して予約できる院」を作ることが最優先です。</div>
+</section>
+
+<!-- ===== CH3 ===== -->
+<section class="chapter" id="ch3">
+  <div class="chapter-header">
+    <div class="chapter-num">3</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Three</p>
+      <h2 class="chapter-title">新患が集まるキーワード戦略と<br>専門院ポジショニング</h2>
+    </div>
+  </div>
+
+  <h3 class="sec-h2">はじめに</h3>
+  <p class="body-text">多くの鍼灸院が集客できない理由は、技術不足ではありません。立地でもありません。価格でもありません。実はもっとシンプルです。<strong>「何屋なのかわからない」</strong>からです。</p>
+  <p class="body-text">患者さんは、何でもできる院を探していません。<strong>自分の悩みを解決してくれる専門家を探しています。</strong></p>
+
+  <h3 class="sec-h2">患者は「鍼灸院」を探していない</h3>
+  <p class="body-text">例えば先生が患者だったとします。最近眠れない。夜中に何度も目が覚める。朝起きても疲れが取れない。その時、検索するのは「○○市 鍼灸院」でしょうか？違います。多くの場合、</p>
+  <div class="highlight-box">「○○市 不眠」「○○市 自律神経」「○○市 睡眠障害」で検索します。<br><br>つまり患者は院を探しているのではなく<strong>解決策を探しているのです。</strong></div>
+
+  <h3 class="sec-h2">集客できない院の特徴</h3>
+  <p class="body-text">よくあるプロフィール：肩こり／腰痛／頭痛／膝痛／美容鍼／自律神経／交通事故／スポーツ障害／妊活／産後骨盤——全部できます。これは一見すると良さそうですが、患者から見ると<strong>「何が得意なの？」</strong>になります。</p>
+
+  <h3 class="sec-h2">専門性が重要な理由</h3>
+  <p class="body-text">患者心理を考えてみましょう。腰痛なら腰痛専門院に行きたい。不眠なら不眠専門院に行きたい。美容なら美容鍼専門院に行きたい。これが自然です。実際には先生が色々診られるとしても、<strong>見せ方は絞った方が有利です。</strong></p>
+
+  <h3 class="sec-h2">地域No.1院がやっていること</h3>
+  <p class="body-text">上位院を分析すると、ほぼ共通しています。自律神経専門／不眠専門／頭痛専門／美容鍼専門／産後専門——専門性が明確です。</p>
+
+  <h3 class="sec-h2">おすすめの専門領域</h3>
+  <p class="body-text">特に鍼灸と相性が良いのは</p>
+  <ul class="dot-list">
+    <li>自律神経</li><li>不眠</li><li>頭痛</li><li>めまい</li><li>美容鍼</li><li>更年期</li><li>妊活</li><li>慢性腰痛</li>
+  </ul>
+  <p class="body-text">です。</p>
+
+  <h3 class="sec-h2">専門領域を選ぶ4つの基準</h3>
+  <ul class="num-list">
+    <li>症例数が多い</li><li>利益率が高い</li><li>先生が好き</li><li>地域競合が弱い</li>
+  </ul>
+  <p class="body-text">この4つを満たすものを選びます。</p>
+
+  <h3 class="sec-h2">キーワード選定方法</h3>
+  <p class="body-text">まず紙を用意してください。そして書き出します。患者が検索しそうな症状：不眠／頭痛／肩こり／腰痛／めまい／自律神経／更年期／眼精疲労／美容鍼／たるみ。その後、地域名を掛け合わせます。「新宿 不眠」「新宿 頭痛」「新宿 自律神経」「新宿 美容鍼」——これが基本です。</p>
+
+  <h3 class="sec-h2">Googleビジネスプロフィールへの反映</h3>
+  <p class="body-text">選んだキーワードは以下へ反映します。説明文／サービス／投稿／口コミ／写真説明／ホームページ——全てです。</p>
+
+  <h3 class="sec-h2">具体例</h3>
+  <div class="warn-box">❌ 悪い例：地域密着の鍼灸院です。肩こりや腰痛など様々なお悩みに対応しております。</div>
+  <div class="highlight-box">✅ 良い例：不眠・自律神経専門の鍼灸院です。夜眠れない、途中で目が覚める、朝スッキリ起きられないなどのお悩みに対応しています。</div>
+
+  <h3 class="sec-h2">ポジションをずらす</h3>
+  <p class="body-text">重要な考え方があります。<strong>正面衝突しない。</strong></p>
+  <div class="case-box">
+    <strong>例①</strong> 地域に美容鍼専門院が多い → 「たるみ改善美容鍼専門」にする。<br>
+    <strong>例②</strong> 自律神経専門院が多い → 「不眠専門」にする。<br><br>
+    少し角度を変えるだけで勝率は上がります。
+  </div>
+
+  <h3 class="sec-h2">先生がやるべきワーク</h3>
+  <div class="sheet-box">
+    得意な症状：＿＿＿＿＿＿＿＿＿＿<br>
+    症例数が多い症状：＿＿＿＿＿＿＿＿<br>
+    利益率が高い症状：＿＿＿＿＿＿＿＿<br>
+    競合が少ない症状：＿＿＿＿＿＿＿＿<br><br>
+    その中から<strong>主力3症状</strong>を決める。これが今後の軸になります。
+  </div>
+
+  <div class="success-box"><strong>第3章まとめ</strong><br>患者は鍼灸院を探しているのではありません。解決策を探しています。だからこそ、何でも屋ではなく専門家として認識されることが重要です。</div>
+</section>
+
+<!-- ===== CH4 ===== -->
+<section class="chapter" id="ch4">
+  <div class="chapter-header">
+    <div class="chapter-num">4</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Four</p>
+      <h2 class="chapter-title">月20件以上の口コミを集める<br>仕組み化マニュアル</h2>
+    </div>
+  </div>
+
+  <div class="success-box"><strong>この章が最重要です。</strong>もしMEOで一つだけやるとしたら何か？と聞かれたら、私は迷わず答えます。<strong>口コミ</strong>です。</div>
+
+  <h3 class="sec-h2">なぜ口コミが重要なのか</h3>
+  <p class="body-text">患者は先生を知りません。技術も知りません。人柄も知りません。だから<strong>他人の評価</strong>を見ます。Amazonで商品を買う時と同じです。</p>
+  <div class="highlight-box">口コミ5件・評価4.5　vs　口コミ180件・評価4.8<br><br>どちらを選ぶでしょうか。ほとんどの人は後者です。</div>
+
+  <h3 class="sec-h2">口コミが増えると起きること</h3>
+  <div class="flow-steps">
+    <div class="flow-step"><div class="flow-icon">↑</div><div class="flow-text">Google評価が上がる</div></div>
+    <div class="flow-step"><div class="flow-icon">↑</div><div class="flow-text">患者の信頼が上がる</div></div>
+    <div class="flow-step"><div class="flow-icon">↑</div><div class="flow-text">予約率が上がる</div></div>
+    <div class="flow-step"><div class="flow-icon">↑</div><div class="flow-text">新患が増える</div></div>
+    <div class="flow-step"><div class="flow-icon">↑</div><div class="flow-text">さらに口コミが増える（好循環）</div></div>
+  </div>
+
+  <h3 class="sec-h2">目標件数</h3>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">30件</div><div class="stat-label">開業直後の目標</div></div>
+    <div class="stat-card"><div class="stat-num">50件</div><div class="stat-label">まず目指す</div></div>
+    <div class="stat-card"><div class="stat-num">100件</div><div class="stat-label">地域上位</div></div>
+    <div class="stat-card"><div class="stat-num">200+</div><div class="stat-label">地域トップ層</div></div>
+  </div>
+
+  <h3 class="sec-h2">間違った依頼方法</h3>
+  <div class="warn-box">❌ よくある失敗：「口コミお願いします」だけ。これでは増えません。患者は忙しいです。忘れます。面倒です。<strong>仕組みが必要です。</strong></div>
+
+  <h3 class="sec-h2">ベストな依頼タイミング</h3>
+  <p class="body-text">口コミ依頼は<strong>感動直後</strong>です。例えば「肩が楽になった」「眠れるようになった」「頭痛が減った」——その瞬間です。</p>
+  <div class="sec-h3">ゴールデンタイム</div>
+  <div class="flow-steps">
+    <div class="flow-step"><div class="flow-icon">1</div><div class="flow-text">施術終了</div></div>
+    <div class="flow-step"><div class="flow-icon">2</div><div class="flow-text">変化確認</div></div>
+    <div class="flow-step"><div class="flow-icon">3</div><div class="flow-text">喜ぶ</div></div>
+    <div class="flow-step"><div class="flow-icon">4</div><div class="flow-text">口コミ依頼</div></div>
+  </div>
+  <p class="body-text">この流れが最強です。</p>
+
+  <h3 class="sec-h2">院長トーク例</h3>
+  <div class="template-box">
+    <span class="template-label">トーク例</span>
+    <div class="template-body">○○さん、もしよろしければ同じようなお悩みで困っている方のために感想を書いていただけると嬉しいです。</div>
+  </div>
+  <p class="body-text">これだけで十分です。</p>
+
+  <h3 class="sec-h2">QRコード活用</h3>
+  <p class="body-text">口コミが増えない院は導線が悪いです。理想：QRコード → スマホ → 30秒 → 投稿完了 です。</p>
+
+  <h3 class="sec-h2">LINE活用</h3>
+  <p class="body-text">来院後に自動送信する仕組みを作るだけで大きく変わります。</p>
+  <div class="template-box">
+    <span class="template-label">LINE自動送信テンプレ</span>
+    <div class="template-body">本日はご来院ありがとうございました。
+もし施術がお役に立てたようでしたら、
+同じ悩みを持つ方のために口コミをいただけると嬉しいです。</div>
+  </div>
+
+  <h3 class="sec-h2">スタッフ教育</h3>
+  <p class="body-text">受付スタッフの一言で口コミ数は変わります。院長だけに任せない。受付も依頼する。これが重要です。</p>
+
+  <h3 class="sec-h2">絶対にやってはいけないこと</h3>
+  <div class="warn-box">❌ 口コミ特典・口コミ割引・金銭提供・口コミ強要<br>これらはGoogle規約違反です。</div>
+
+  <h3 class="sec-h2">口コミ返信</h3>
+  <p class="body-text">返信率100%が理想です。患者は返信も見ています。</p>
+  <div class="flow-steps">
+    <div class="flow-step"><div class="flow-icon">1</div><div class="flow-text">感謝</div></div>
+    <div class="flow-step"><div class="flow-icon">2</div><div class="flow-text">症状に触れる</div></div>
+    <div class="flow-step"><div class="flow-icon">3</div><div class="flow-text">再来院歓迎</div></div>
+  </div>
+  <p class="body-text">これが基本です。</p>
+  <div class="template-box">
+    <span class="template-label">返信テンプレート</span>
+    <div class="template-body">○○様
+この度は嬉しい口コミをありがとうございます。
+不眠のお悩みが改善傾向とのことで大変嬉しく思います。
+今後も快適な毎日を送れるようサポートさせていただきます。</div>
+  </div>
+
+  <h3 class="sec-h2">口コミ管理シート</h3>
+  <p class="body-text">毎月記録してください。</p>
+  <div class="sheet-box">
+    現在件数：＿＿件<br>
+    今月獲得：＿＿件<br>
+    来月目標：＿＿件<br>
+    増減理由：＿＿＿＿＿＿＿＿
+  </div>
+
+  <h3 class="sec-h2">月20件増やす方法</h3>
+  <div class="highlight-box">1日1件 → 月25営業日 → 25件<br><br>実は難しくありません。<strong>依頼率を上げるだけです。</strong></div>
+
+  <div class="success-box"><strong>第4章まとめ</strong><br>口コミは偶然集まるものではありません。仕組みで集めるものです。そしてGoogleマップ集客において、最も費用対効果が高い施策です。患者が喜んだ瞬間に依頼する。導線を作る。返信する。管理する。これを徹底してください。</div>
+</section>
+
+<!-- ===== CH5 ===== -->
+<section class="chapter" id="ch5">
+  <div class="chapter-header">
+    <div class="chapter-num">5</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Five</p>
+      <h2 class="chapter-title">患者が予約したくなる<br>写真戦略と投稿運用大全</h2>
+    </div>
+  </div>
+
+  <h3 class="sec-h2">はじめに</h3>
+  <p class="body-text">Googleマップで患者さんが院を探す時間は、平均すると1分もありません。その短い時間の中で、患者さんは「ここに行ってみたい」「なんか安心できそう」「先生が優しそう」と思った院を選びます。そしてその判断材料の大部分が<strong>写真</strong>です。</p>
+
+  <h3 class="sec-h2">写真は技術を見せるものではない</h3>
+  <p class="body-text">多くの先生が勘違いしています。写真の目的は技術を見せることではありません。<strong>安心感を見せること</strong>です。患者は技術の良し悪しを判断できません。しかし清潔感・雰囲気・人柄は判断できます。</p>
+
+  <h3 class="sec-h2">患者が本当に見ている写真</h3>
+  <p class="body-text">Googleマップ上で患者がよく見る順番：</p>
+  <ul class="num-list">
+    <li>院長写真</li><li>院内写真</li><li>施術風景</li><li>口コミ</li><li>外観写真</li>
+  </ul>
+
+  <h3 class="sec-h2">院長写真が重要な理由</h3>
+  <p class="body-text">患者は院ではなく<strong>人</strong>に通います。特に鍼灸は身体に触れるサービスです。「どんな先生なんだろう？」「怖くないかな？」「話しやすいかな？」を見ています。</p>
+  <div class="warn-box">❌ NGな院長写真：腕組み→真顔→怖い／証明写真風→近寄りがたい／加工しすぎ→信用できない</div>
+  <div class="highlight-box">✅ 理想の院長写真：笑顔／清潔感／白衣／自然光／親しみやすい——これだけで十分です。</div>
+
+  <h3 class="sec-h2">写真枚数の目安</h3>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">50枚</div><div class="stat-label">最低</div></div>
+    <div class="stat-card"><div class="stat-num">100枚</div><div class="stat-label">推奨</div></div>
+    <div class="stat-card"><div class="stat-num">200〜500枚</div><div class="stat-label">上位院</div></div>
+  </div>
+  <p class="body-text">実際に分析すると、地域上位院は写真量が圧倒的です。</p>
+
+  <h3 class="sec-h2">必須写真一覧（まずこの20種類を揃えましょう）</h3>
+  <ul class="dot-list">
+    <li>外観</li><li>入口</li><li>受付</li><li>待合室</li><li>施術室</li><li>施術ベッド</li><li>消毒設備</li><li>院長</li><li>スタッフ</li><li>施術風景</li><li>カウンセリング</li><li>美容鍼施術</li><li>鍼施術</li><li>灸施術</li><li>患者との写真</li><li>勉強会</li><li>院内イベント</li><li>設備</li><li>看板</li><li>アクセス</li>
+  </ul>
+
+  <h3 class="sec-h2">写真撮影ルール</h3>
+  <p class="body-text">スマホで十分です。重要なのは<strong>継続</strong>です。おすすめは毎週5枚追加。年間260枚——これだけで競合との差が開きます。</p>
+
+  <h3 class="sec-h2">Googleが好む写真</h3>
+  <p class="body-text">Googleは<strong>新しい情報</strong>を好みます。つまり「一気に100枚」より「毎週5枚」の方が良い。</p>
+
+  <h3 class="sec-h2">投稿は必要なのか？</h3>
+  <p class="body-text">結論：<strong>必要です。</strong>ただし順位を上げるためではありません。<strong>信頼を上げるため</strong>です。</p>
+  <div class="flow-steps">
+    <div class="flow-step"><div class="flow-icon">1</div><div class="flow-text">患者教育</div></div>
+    <div class="flow-step"><div class="flow-icon">2</div><div class="flow-text">専門性訴求</div></div>
+    <div class="flow-step"><div class="flow-icon">3</div><div class="flow-text">予約促進</div></div>
+  </div>
+  <p class="body-text">この流れです。</p>
+
+  <h3 class="sec-h2">投稿ネタは4種類だけ</h3>
+  <p class="body-text">多くの先生が「何を書けばいいかわからない」と言います。安心してください。4種類で十分です。</p>
+  <ul class="num-list">
+    <li>症状解説</li><li>患者事例</li><li>院の日常</li><li>季節ネタ</li>
+  </ul>
+
+  <h3 class="sec-h2">最強なのは症状解説</h3>
+  <p class="body-text">患者が知りたいのは先生の日記ではありません。<strong>自分の悩み</strong>です。不眠・頭痛・自律神経・腰痛・美容鍼——これらの解説は反応が高いです。</p>
+
+  <h3 class="sec-h2">投稿テンプレート</h3>
+  <div class="template-box">
+    <span class="template-label">投稿例（不眠）</span>
+    <div class="template-body">【不眠でお悩みの方へ】
+なかなか寝付けない、
+途中で目が覚める、
+朝スッキリ起きられない。
+そんな不眠のお悩みは
+自律神経の乱れが関係していることがあります。
+当院では身体全体のバランスを整えながら施術を行っています。
+お気軽にご相談ください。</div>
+  </div>
+
+  <h3 class="sec-h2">患者事例投稿</h3>
+  <p class="body-text">非常に強力です。</p>
+  <div class="case-box">
+    <strong>事例例：</strong>40代女性／不眠 → 週3回目が覚める → 施術継続 → 朝まで眠れる日が増加<br><br>
+    このような事例は予約率向上につながります。<br>
+    ※効果には個人差があります、という表記は忘れないでください。
+  </div>
+
+  <h3 class="sec-h2">ChatGPT活用術</h3>
+  <p class="body-text">先生は文章を書くプロではありません。AIを活用しましょう。</p>
+  <div class="template-box">
+    <span class="template-label">プロンプト例</span>
+    <div class="template-body">あなたは鍼灸院専門のマーケターです。
+Googleビジネスプロフィール用の投稿を作成してください。
+テーマは不眠。
+300文字程度。
+40代女性向け。
+専門性と安心感を重視してください。</div>
+  </div>
+  <p class="body-text">これだけで十分です。</p>
+
+  <h3 class="sec-h2">月30投稿を30分で作る方法</h3>
+  <div class="flow-steps">
+    <div class="flow-step"><div class="flow-icon">1</div><div class="flow-text">症状を30個並べる</div></div>
+    <div class="flow-step"><div class="flow-icon">2</div><div class="flow-text">ChatGPTへ入力</div></div>
+    <div class="flow-step"><div class="flow-icon">3</div><div class="flow-text">30本生成</div></div>
+    <div class="flow-step"><div class="flow-icon">4</div><div class="flow-text">予約投稿</div></div>
+  </div>
+  <p class="body-text">完了。</p>
+
+  <div class="success-box"><strong>第5章まとめ</strong><br>写真と投稿の目的は順位を上げることではありません。患者の不安を減らし、予約率を上げることです。そのために院長の人柄・院の雰囲気・専門性を伝えてください。そしてAIを活用しながら、継続できる仕組みを作りましょう。</div>
+</section>
+
+<!-- ===== CH6 ===== -->
+<section class="chapter" id="ch6">
+  <div class="chapter-header">
+    <div class="chapter-num">6</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Six</p>
+      <h2 class="chapter-title">地域No.1院が実践する<br>競合分析と順位改善戦略</h2>
+    </div>
+  </div>
+
+  <h3 class="sec-h2">はじめに</h3>
+  <p class="body-text">MEOは<strong>絶対評価</strong>ではありません。<strong>相対評価</strong>です。つまり「良い院かどうか」ではなく「競合より良いか」で決まります。</p>
+
+  <h3 class="sec-h2">多くの院長がやらないこと</h3>
+  <p class="body-text">競合分析です。しかし上位院は必ず分析しています。スポーツでも経営でも投資でも、勝つ人は相手を研究します。MEOも同じです。</p>
+
+  <h3 class="sec-h2">最初にやること</h3>
+  <p class="body-text">Googleで検索します。地域＋症状（例：「新宿 不眠」「新宿 自律神経」「新宿 美容鍼」「新宿 腰痛」）。その時に出てくる<strong>上位3院</strong>を調べます。</p>
+
+  <h3 class="sec-h2">競合分析シート</h3>
+  <p class="body-text">記録する項目：</p>
+  <ul class="dot-list">
+    <li>口コミ数</li><li>評価点数</li><li>写真枚数</li><li>投稿頻度</li><li>専門性</li><li>説明文</li><li>サービス登録数</li><li>ホームページ品質</li>
+  </ul>
+  <p class="body-text">これだけで十分です。</p>
+
+  <h3 class="sec-h2">競合口コミは宝の山</h3>
+  <p class="body-text">実は口コミ分析が最も重要です。患者が何に価値を感じているかが分かるからです。よく出る言葉：「説明が丁寧」「先生が優しい」「安心できる」「眠れるようになった」「頭痛が減った」——これが患者の本音です。</p>
+
+  <h3 class="sec-h2">ワーク：競合口コミ50件を読む</h3>
+  <div class="sheet-box">
+    評価されている点：＿＿＿＿＿＿＿＿＿＿<br>
+    不満点：＿＿＿＿＿＿＿＿＿＿<br>
+    真似できる点：＿＿＿＿＿＿＿＿＿＿<br>
+    書き出してください。
+  </div>
+
+  <h3 class="sec-h2">写真分析</h3>
+  <p class="body-text">上位院の写真を見てください。院長写真は何枚あるか／施術写真は何枚あるか／院内写真は何枚あるか／患者写真は何枚あるか——見れば差が分かります。</p>
+
+  <h3 class="sec-h2">投稿分析</h3>
+  <p class="body-text">確認項目：月何回投稿しているか／どんなテーマか／患者事例はあるか／症状解説はあるか／季節ネタはあるか——これを調べるだけで改善点が見えます。</p>
+
+  <h3 class="sec-h2">地域No.1院の共通点</h3>
+  <p class="body-text">分析すると驚くほど共通しています。</p>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">100+</div><div class="stat-label">口コミ件数以上</div></div>
+    <div class="stat-card"><div class="stat-num">200+</div><div class="stat-label">写真枚数以上</div></div>
+    <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">返信率</div></div>
+    <div class="stat-card"><div class="stat-num">週1+</div><div class="stat-label">投稿頻度</div></div>
+  </div>
+  <p class="body-text">さらに専門性が明確・ホームページも整備。特別な裏技はありません。<strong>積み上げです。</strong></p>
+
+  <h3 class="sec-h2">ポジションをずらす</h3>
+  <p class="body-text">正面衝突は避けます。</p>
+  <div class="case-box">
+    <strong>例①</strong> 美容鍼専門院が多い → 「40代たるみ改善専門」にする。<br>
+    <strong>例②</strong> 自律神経専門院が多い → 「不眠専門」にする。<br><br>
+    少し角度を変えるだけで勝率は大きく上がります。
+  </div>
+
+  <h3 class="sec-h2">毎月やること</h3>
+  <p class="body-text">月初に30分だけ確保してください。</p>
+  <ul class="checklist">
+    <li>競合口コミ確認</li><li>競合順位確認</li><li>写真枚数確認</li><li>投稿確認</li><li>改善点整理</li>
+  </ul>
+  <p class="body-text">これだけです。</p>
+
+  <div class="success-box"><strong>第6章まとめ</strong><br>MEOは感覚で行うものではありません。数字と分析で行うものです。競合を知り、患者を知り、自院の強みを磨く。それが最短ルートです。</div>
+</section>
+
+<!-- ===== CH7 ===== -->
+<section class="chapter" id="ch7">
+  <div class="chapter-header">
+    <div class="chapter-num">7</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Seven</p>
+      <h2 class="chapter-title">数字管理とインサイト分析</h2>
+    </div>
+  </div>
+
+  <h3 class="sec-h2">はじめに</h3>
+  <p class="body-text">MEOはマーケティングです。マーケティングは感覚ではなく<strong>数字で判断</strong>します。</p>
+  <div class="warn-box">よくある院長の言葉：「最近問い合わせ減った気がする」「順位下がった気がする」「なんとなく調子悪い」<br><br>これは全て危険です。経営判断を感覚でしているからです。</div>
+
+  <h3 class="sec-h2">Googleビジネスプロフィールの強み</h3>
+  <p class="body-text">Googleは無料で大量のデータを提供してくれています。それが<strong>インサイト</strong>です。ここを見るだけで何が問題なのかかなり見えてきます。</p>
+
+  <h3 class="sec-h2">必ず見るべき数字① 表示回数</h3>
+  <p class="body-text">患者が何回先生の院を見たかです。表示回数増加 → 露出増加 → 認知増加 になります。</p>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">500〜1000</div><div class="stat-label">開業初期の月間目安</div></div>
+    <div class="stat-card"><div class="stat-num">3000〜5000</div><div class="stat-label">安定集客院の月間目安</div></div>
+    <div class="stat-card"><div class="stat-num">5000+</div><div class="stat-label">地域上位院の月間目安</div></div>
+  </div>
+  <p class="body-text">あくまで目安です。</p>
+
+  <h3 class="sec-h2">必ず見るべき数字② 電話件数</h3>
+  <p class="body-text">最も重要です。表示されても電話されなければ意味がありません。毎月記録してください。</p>
+  <div class="case-box">今月：15件 ／ 先月：10件 ／ 増加率：150%——このように管理します。</div>
+
+  <h3 class="sec-h2">必ず見るべき数字③ ウェブサイトクリック</h3>
+  <p class="body-text">患者の興味度が分かります。クリック率が低い場合、プロフィールが弱い可能性があります。</p>
+
+  <h3 class="sec-h2">必ず見るべき数字④ ルート検索</h3>
+  <p class="body-text">実は非常に重要です。ルート検索 → 来院意欲 高い。電話より先にルート検索する患者もいます。</p>
+
+  <h3 class="sec-h2">必ず見るべき数字⑤ 口コミ増加数</h3>
+  <p class="body-text">毎月管理します。理想：月10件以上。目標：年間120件。</p>
+
+  <h3 class="sec-h2">必ず見るべき数字⑥ 写真枚数</h3>
+  <p class="body-text">多くの院は増えていません。上位院は増え続けています。理想：月20枚追加、年間240枚。</p>
+
+  <h3 class="sec-h2">数字管理シート</h3>
+  <p class="body-text">最低限この6項目を毎月記録してください。</p>
+  <div class="sheet-box">
+    ① 表示回数：＿＿＿＿<br>
+    ② 電話件数：＿＿＿＿<br>
+    ③ サイトクリック：＿＿＿＿<br>
+    ④ ルート検索：＿＿＿＿<br>
+    ⑤ 口コミ数：＿＿＿＿<br>
+    ⑥ 写真数：＿＿＿＿
+  </div>
+
+  <h3 class="sec-h2">改善サイクル（最重要）</h3>
+  <div class="flow-steps">
+    <div class="flow-step"><div class="flow-icon">1</div><div class="flow-text">計測</div></div>
+    <div class="flow-step"><div class="flow-icon">2</div><div class="flow-text">分析</div></div>
+    <div class="flow-step"><div class="flow-icon">3</div><div class="flow-text">改善</div></div>
+    <div class="flow-step"><div class="flow-icon">4</div><div class="flow-text">再計測（繰り返し）</div></div>
+  </div>
+
+  <h3 class="sec-h2">ケース別改善策</h3>
+  <div class="case-box"><strong>ケース①</strong> 表示回数が少ない<br>原因：専門性不足／対策：サービス追加、投稿強化</div>
+  <div class="case-box"><strong>ケース②</strong> 表示回数多い・電話少ない<br>原因：信頼不足／対策：口コミ・写真強化</div>
+  <div class="case-box"><strong>ケース③</strong> 電話多い・来院少ない<br>原因：予約導線・対応に問題／対策：受付改善、LINE導線改善</div>
+
+  <h3 class="sec-h2">月1回の経営会議</h3>
+  <p class="body-text">たとえ1人院でもやってください。</p>
+  <ul class="checklist">
+    <li>今月順位</li><li>今月口コミ</li><li>今月写真</li><li>今月投稿</li><li>問い合わせ</li><li>来院数</li>
+  </ul>
+  <p class="body-text">これだけです。</p>
+
+  <h3 class="sec-h2">感覚経営から卒業する</h3>
+  <div class="highlight-box">成果が出る院長は<strong>数字を見る。</strong><br>成果が出ない院長は<strong>気分を見る。</strong><br><br>ここが大きな違いです。</div>
+
+  <div class="success-box"><strong>第7章まとめ</strong><br>MEO成功の鍵は継続的改善です。そして改善には数字が必要です。感覚ではなくデータで判断しましょう。</div>
+</section>
+
+<!-- ===== CH8 ===== -->
+<section class="chapter" id="ch8">
+  <div class="chapter-header">
+    <div class="chapter-num">8</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Eight</p>
+      <h2 class="chapter-title">90日実践ロードマップと<br>院長チェックリスト</h2>
+    </div>
+  </div>
+
+  <h3 class="sec-h2">はじめに</h3>
+  <p class="body-text">ここまで読んでいただきありがとうございます。しかし、読むだけでは意味がありません。<strong>実践して初めて成果になる</strong>からです。この章では90日間でGoogleマップ集客を軌道に乗せる方法をお伝えします。</p>
+
+  <h3 class="sec-h2">1ヶ月目：土台構築期間</h3>
+  <p class="body-text">目標：プロフィール完成。ここでは完璧より<strong>完成</strong>を目指します。</p>
+  <ul class="checklist">
+    <li>オーナー確認</li><li>カテゴリー設定</li><li>説明文作成</li><li>サービス登録</li><li>写真50枚</li><li>予約導線整備</li><li>ホームページ確認</li>
+  </ul>
+  <div class="sec-h3">1ヶ月目終了時点の理想状態</div>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">50枚+</div><div class="stat-label">写真枚数以上</div></div>
+    <div class="stat-card"><div class="stat-num">完成</div><div class="stat-label">説明文</div></div>
+    <div class="stat-card"><div class="stat-num">10個+</div><div class="stat-label">サービス登録以上</div></div>
+    <div class="stat-card"><div class="stat-num">30件</div><div class="stat-label">口コミ</div></div>
+  </div>
+
+  <h3 class="sec-h2">2ヶ月目：口コミ強化期間</h3>
+  <p class="body-text">目標：口コミを集める仕組み作り。目標：月10〜20件。</p>
+  <ul class="checklist">
+    <li>QRコード設置</li><li>LINE導線構築</li><li>受付教育</li><li>口コミ依頼</li><li>口コミ返信</li>
+  </ul>
+  <p class="body-text">この時期に起きること：口コミ増加 → 信頼向上 → 問い合わせ増加、が始まります。</p>
+
+  <h3 class="sec-h2">3ヶ月目：成長期間</h3>
+  <p class="body-text">目標：地域上位を目指す。ここから差が付き始めます。</p>
+  <ul class="checklist">
+    <li>投稿週2回</li><li>写真週5枚</li><li>競合分析</li><li>数字管理</li><li>改善実施</li>
+  </ul>
+
+  <h3 class="sec-h2">90日後の理想状態</h3>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">50〜100</div><div class="stat-label">口コミ件数</div></div>
+    <div class="stat-card"><div class="stat-num">100枚+</div><div class="stat-label">写真枚数以上</div></div>
+    <div class="stat-card"><div class="stat-num">20本+</div><div class="stat-label">投稿本数以上</div></div>
+    <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">口コミ返信率</div></div>
+    <div class="stat-card"><div class="stat-num">実施中</div><div class="stat-label">数字管理</div></div>
+  </div>
+  <p class="body-text">ここまで来ると競合との差が見えてきます。</p>
+
+  <h3 class="sec-h2">院長週次チェックリスト（毎週月曜日・10分で終わります）</h3>
+  <ul class="checklist">
+    <li>口コミ依頼したか</li><li>口コミ返信したか</li><li>写真追加したか</li><li>投稿したか</li><li>競合確認したか</li><li>数字確認したか</li>
+  </ul>
+
+  <h3 class="sec-h2">院長月次チェックリスト（毎月1日・30分で終わります）</h3>
+  <ul class="checklist">
+    <li>表示回数</li><li>電話件数</li><li>サイトクリック</li><li>ルート検索</li><li>口コミ増加</li><li>写真増加</li><li>投稿本数</li><li>順位確認</li>
+  </ul>
+
+  <h3 class="sec-h2">スタッフチェックリスト</h3>
+  <div class="sec-h3">受付</div>
+  <ul class="checklist">
+    <li>来院時挨拶</li><li>次回予約案内</li><li>口コミ依頼</li><li>QRコード案内</li>
+  </ul>
+  <div class="sec-h3">施術者</div>
+  <ul class="checklist">
+    <li>症状変化確認</li><li>満足度確認</li><li>口コミ依頼</li>
+  </ul>
+  <p class="body-text">全員で取り組みます。</p>
+
+  <h3 class="sec-h2">地域No.1院の公式</h3>
+  <p class="body-text">最後に、私が様々な鍼灸院を分析して辿り着いたシンプルな公式をお伝えします。</p>
+  <div class="highlight-box" style="text-align:center;font-size:18px;padding:28px;font-family:'Noto Serif JP',serif;font-weight:700;">
+    専門性 × 口コミ × 写真 × 継続 ＝ 地域No.1
+  </div>
+  <p class="body-text">難しいテクニックではありません。不眠専門・口コミ150件・写真300枚・週1投稿・継続——これだけで多くの地域では十分勝負できます。</p>
+
+  <div class="success-box"><strong>最後に</strong><br>ここまで読んでくださった先生へ。MEOは特別な才能も特別な技術も必要ありません。必要なのは正しい順番と継続です。今日この瞬間から、まず一つだけ実践してください。おすすめは「写真を10枚追加する」または「口コミ依頼を1人に行う」です。小さな行動が、半年後、1年後、大きな集客資産になります。</div>
+</section>
+
+<!-- ===== BONUS 1 ===== -->
+<section class="chapter" id="bonus1">
+  <div class="appendix-header">
+    <p class="appendix-eyebrow">別冊特典 ①</p>
+    <h2 class="appendix-title">口コミ依頼LINEテンプレート20選</h2>
+  </div>
+
+  <div class="template-box"><span class="template-label">テンプレ① 王道</span><div class="template-body">本日はご来院ありがとうございました。
+もし施術がお役に立てたようでしたら、同じようなお悩みを持つ方のためにGoogleの口コミをいただけると大変嬉しいです。
+ご協力いただけますと幸いです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ② 感謝型</span><div class="template-body">本日は貴重なお時間をいただきありがとうございました。
+今後もより良い施術をご提供するため、率直なご感想をGoogle口コミにいただけると嬉しいです。
+よろしくお願いいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ③ 不眠専門院向け</span><div class="template-body">本日はご来院ありがとうございました。
+睡眠のお悩みが少しでも改善に向かうお手伝いができていましたら嬉しく思います。
+同じように不眠で悩んでいる方の参考になるため、口コミをご記入いただけますと幸いです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ④ 自律神経専門院向け</span><div class="template-body">本日はありがとうございました。
+自律神経のお悩みは周囲に理解されにくく、一人で悩まれている方も多くいらっしゃいます。
+もしよろしければ体験談を口コミとして共有いただけると嬉しいです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑤ 美容鍼向け</span><div class="template-body">本日はご来院ありがとうございました。
+美容鍼を検討されている方の参考になるため、施術を受けたご感想を口コミにご投稿いただけますと幸いです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑥ 変化実感直後</span><div class="template-body">本日の施術後のお身体の変化を実感いただけて私たちも嬉しく思います。
+もしよろしければ、そのご感想を口コミとして残していただけませんか？</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑦ 初回患者向け</span><div class="template-body">本日は初めてのご来院ありがとうございました。
+初めて来院を検討している方は不安を感じていることも多いため、率直なご感想をいただけると大変助かります。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑧ 長期通院患者向け</span><div class="template-body">いつもご来院ありがとうございます。
+これまでの変化や感じていることを口コミで共有いただけると嬉しいです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑨ スタッフ対応訴求</span><div class="template-body">本日はご来院ありがとうございました。
+施術だけでなく、院内の雰囲気やスタッフ対応についてもご感想をいただけると嬉しいです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑩ 地域貢献型</span><div class="template-body">地域の皆さまにより良い医療サービスを届けるため、口コミへのご協力をお願いしております。
+ご協力いただけますと幸いです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑪ 紹介患者向け</span><div class="template-body">ご紹介でご来院いただきありがとうございました。
+率直なご感想を口コミで共有いただけると嬉しいです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑫ 妊活鍼灸向け</span><div class="template-body">同じお悩みを抱える方の励みになりますので、ぜひご感想をお聞かせください。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑬ 更年期向け</span><div class="template-body">更年期のお悩みは一人で抱え込みやすいものです。
+体験談を共有いただけると嬉しいです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑭ 腰痛向け</span><div class="template-body">長年の腰痛でお悩みの方の参考になりますので、ぜひ口コミをご投稿ください。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑮ 肩こり向け</span><div class="template-body">施術後の変化や感じたことを率直にお聞かせください。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑯ 頭痛向け</span><div class="template-body">頭痛で悩む方の希望になりますので、ご協力いただけると幸いです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑰ リピート患者向け</span><div class="template-body">いつもありがとうございます。
+これまでの変化をぜひ共有いただけると嬉しいです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑱ 院長指名患者向け</span><div class="template-body">いつも施術を任せていただきありがとうございます。
+ご感想をいただけると励みになります。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑲ 卒業患者向け</span><div class="template-body">改善のお手伝いができたことを嬉しく思います。
+これまでの体験を口コミで残していただけますと幸いです。</div></div>
+
+  <div class="template-box"><span class="template-label">テンプレ⑳ シンプル版</span><div class="template-body">本日はありがとうございました。
+よろしければGoogle口コミへのご協力をお願いいたします。</div></div>
+</section>
+
+<!-- ===== BONUS 2 ===== -->
+<section class="chapter" id="bonus2">
+  <div class="appendix-header">
+    <p class="appendix-eyebrow">別冊特典 ②</p>
+    <h2 class="appendix-title">口コミ返信テンプレート100選</h2>
+  </div>
+
+  <div class="highlight-box"><strong>基本ルール：</strong>返信構成は以下で統一します。①感謝 → ②症状への言及 → ③今後のサポート → ④再来院歓迎</div>
+
+  <h3 class="sec-h2">【高評価口コミ共通】</h3>
+  <div class="template-box"><span class="template-label">①</span><div class="template-body">○○様
+この度は嬉しい口コミをいただき誠にありがとうございます。
+施術や院内の雰囲気にご満足いただけたようで大変嬉しく思います。
+今後も安心して通っていただけるよう努めてまいります。
+引き続きよろしくお願いいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">②</span><div class="template-body">○○様
+温かいご感想をありがとうございます。
+数ある鍼灸院の中から当院をお選びいただき嬉しく思います。
+今後もお身体のサポートを全力でさせていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">③</span><div class="template-body">○○様
+嬉しいお言葉をありがとうございます。
+スタッフ一同大変励みになります。
+今後も快適な毎日を送れるようサポートいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">④</span><div class="template-body">○○様
+高評価をいただきありがとうございます。
+少しでもお力になれたことを嬉しく思います。
+またいつでもご相談ください。</div></div>
+
+  <div class="template-box"><span class="template-label">⑤</span><div class="template-body">○○様
+口コミ投稿ありがとうございます。
+施術効果を実感いただけたとのことで安心いたしました。
+今後もお身体の状態に合わせて施術を行ってまいります。</div></div>
+
+  <h3 class="sec-h2">【不眠】</h3>
+  <div class="template-box"><span class="template-label">⑥</span><div class="template-body">○○様
+この度は嬉しい口コミをありがとうございます。
+不眠のお悩みが改善傾向とのことで私たちも大変嬉しく思います。
+睡眠の質は日常生活にも大きく関わりますので、今後もしっかりサポートいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">⑦</span><div class="template-body">○○様
+ご感想をありがとうございます。
+夜中に目が覚める回数が減ったとのことで安心いたしました。
+引き続き睡眠環境改善のお手伝いをさせていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">⑧</span><div class="template-body">○○様
+朝スッキリ起きられる日が増えたとのこと、とても嬉しく思います。
+今後も良い状態を維持できるようサポートいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">⑨</span><div class="template-body">睡眠のお悩み改善のお力になれたことを嬉しく思います。
+さらに安定した状態を目指して一緒に取り組んでいきましょう。</div></div>
+
+  <div class="template-box"><span class="template-label">⑩</span><div class="template-body">不眠は自律神経とも深く関係しております。
+今後もお身体全体のバランスを整えながら施術を行ってまいります。</div></div>
+
+  <h3 class="sec-h2">【自律神経】</h3>
+  <div class="template-box"><span class="template-label">⑪</span><div class="template-body">自律神経のお悩みは周囲に理解されにくいため、不安も大きかったかと思います。
+改善のお力になれたことを嬉しく思います。</div></div>
+
+  <div class="template-box"><span class="template-label">⑫</span><div class="template-body">めまいや倦怠感が軽減されたとのこと安心いたしました。
+今後も状態を見ながら施術を進めてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">⑬</span><div class="template-body">お身体が少し楽になったとのご報告ありがとうございます。
+無理せず一緒に改善を目指していきましょう。</div></div>
+
+  <div class="template-box"><span class="template-label">⑭</span><div class="template-body">体調の波が落ち着いてきたとのことで嬉しく思います。
+今後も継続的にサポートさせていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">⑮</span><div class="template-body">自律神経のお悩みは焦らず整えていくことが大切です。
+引き続きよろしくお願いいたします。</div></div>
+
+  <h3 class="sec-h2">【頭痛】</h3>
+  <div class="template-box"><span class="template-label">⑯</span><div class="template-body">頭痛の頻度が減ったとのこと安心いたしました。
+日常生活が少しでも快適になれば嬉しく思います。</div></div>
+
+  <div class="template-box"><span class="template-label">⑰</span><div class="template-body">長年のお悩み改善のお手伝いができたことを嬉しく思います。
+今後も状態維持をサポートいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">⑱</span><div class="template-body">頭痛薬に頼る頻度が減ったとのご報告ありがとうございます。
+引き続きお身体を整えてまいりましょう。</div></div>
+
+  <div class="template-box"><span class="template-label">⑲</span><div class="template-body">症状の変化を感じていただけて安心いたしました。
+今後も丁寧に施術させていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">⑳</span><div class="template-body">嬉しい口コミをありがとうございます。
+快適な毎日を送れるよう引き続きサポートいたします。</div></div>
+
+  <h3 class="sec-h2">【肩こり】㉑〜㉕</h3>
+  <p class="body-text">肩こり改善へのコメントとして「肩が軽くなった」「仕事が楽になった」「デスクワークが快適になった」「首肩の張りが減った」「長年の悩みが楽になった」という内容に置き換えて使用。</p>
+
+  <h3 class="sec-h2">【腰痛】㉖〜㉚</h3>
+  <p class="body-text">腰痛改善へのコメントとして「立ち上がりが楽になった」「朝の痛みが減った」「長時間座れるようになった」「趣味を再開できた」「仕事がしやすくなった」などに応用。</p>
+
+  <h3 class="sec-h2">【美容鍼】</h3>
+  <div class="template-box"><span class="template-label">㉛</span><div class="template-body">美容鍼の変化を実感いただけたとのことで大変嬉しく思います。
+今後も理想のお肌づくりをサポートいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">㉜</span><div class="template-body">お顔の変化にご満足いただけたようで安心いたしました。
+継続することでより良い状態を目指していきましょう。</div></div>
+
+  <div class="template-box"><span class="template-label">㉝</span><div class="template-body">お肌のハリ感をご実感いただけて嬉しく思います。
+今後も丁寧に施術させていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">㉞</span><div class="template-body">リラックスして施術を受けていただけたようで安心いたしました。
+美容と健康の両面からサポートいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">㉟</span><div class="template-body">嬉しいご感想をありがとうございます。
+今後もご期待に応えられるよう努めてまいります。</div></div>
+
+  <h3 class="sec-h2">【妊活】㊱〜㊵</h3>
+  <p class="body-text">妊活サポートへの感謝と、身体づくりを継続的に支援する内容に置き換えて活用。</p>
+
+  <h3 class="sec-h2">【更年期】㊶〜㊺</h3>
+  <p class="body-text">更年期特有の不調が軽減したことへの共感と、継続サポートを伝える内容で活用。</p>
+
+  <h3 class="sec-h2">【初回来院】</h3>
+  <div class="template-box"><span class="template-label">㊻</span><div class="template-body">初めてのご来院ありがとうございました。
+安心して施術を受けていただけたようで嬉しく思います。</div></div>
+
+  <div class="template-box"><span class="template-label">㊼</span><div class="template-body">初回の不安が解消されたとのことで安心いたしました。
+今後も丁寧な対応を心がけてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">㊽</span><div class="template-body">数ある院の中から当院をお選びいただきありがとうございます。
+今後ともよろしくお願いいたします。</div></div>
+
+  <h3 class="sec-h2">【リピート患者】</h3>
+  <div class="template-box"><span class="template-label">㊾</span><div class="template-body">いつもご来院ありがとうございます。
+長くお身体を任せていただけることに感謝しております。</div></div>
+
+  <div class="template-box"><span class="template-label">㊿</span><div class="template-body">継続して通っていただきありがとうございます。
+今後も健康維持のお手伝いをさせていただきます。</div></div>
+
+  <div class="highlight-box">この50個だけでも、ほとんどの鍼灸院は十分回せます。</div>
+
+  <h3 class="sec-h2">【★4評価への返信】</h3>
+  <div class="template-box"><span class="template-label">51</span><div class="template-body">○○様
+この度はご来院いただきありがとうございました。
+高評価をいただき大変嬉しく思います。
+さらにご満足いただける院づくりを目指してまいりますので、今後ともよろしくお願いいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">52</span><div class="template-body">○○様
+口コミありがとうございます。
+貴重なご意見を励みに、より良い施術とサービスをご提供できるよう努めてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">53</span><div class="template-body">○○様
+ご来院ありがとうございました。
+温かいご感想をいただき嬉しく思います。
+今後も快適に通っていただけるよう改善を続けてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">54</span><div class="template-body">○○様
+この度は口コミ投稿ありがとうございます。
+さらにご期待に応えられるようスタッフ一同精進してまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">55</span><div class="template-body">○○様
+高評価をいただき誠にありがとうございます。
+今後もよりご満足いただける施術をご提供できるよう努めてまいります。</div></div>
+
+  <h3 class="sec-h2">【効果を少し実感した患者】</h3>
+  <div class="template-box"><span class="template-label">56</span><div class="template-body">○○様
+口コミありがとうございます。
+お身体に変化を感じていただけたようで安心いたしました。
+今後もより良い状態を目指してサポートさせていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">57</span><div class="template-body">○○様
+少しずつ改善を実感いただけているとのことで嬉しく思います。
+引き続きお身体の状態に合わせて施術を行ってまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">58</span><div class="template-body">○○様
+ご感想ありがとうございます。
+お身体の変化には個人差がありますが、今後もしっかりサポートいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">59</span><div class="template-body">○○様
+嬉しい口コミをありがとうございます。
+焦らず一歩ずつ改善を目指していきましょう。</div></div>
+
+  <div class="template-box"><span class="template-label">60</span><div class="template-body">○○様
+施術の変化を感じていただけたとのことで安心いたしました。
+今後も丁寧に対応させていただきます。</div></div>
+
+  <h3 class="sec-h2">【効果実感がまだ弱い患者】</h3>
+  <div class="template-box"><span class="template-label">61</span><div class="template-body">○○様
+貴重なご意見をありがとうございます。
+お身体の状態によっては変化の現れ方に個人差があります。
+今後も状態を確認しながら最適な施術をご提案させていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">62</span><div class="template-body">○○様
+率直なご感想をありがとうございます。
+よりご満足いただけるよう、お身体の状態を丁寧に確認しながら施術を行ってまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">63</span><div class="template-body">○○様
+口コミ投稿ありがとうございます。
+いただいたお声を真摯に受け止め、今後の施術に活かしてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">64</span><div class="template-body">○○様
+ご期待に沿えるよう引き続きサポートいたします。
+ご不安な点がございましたらいつでもご相談ください。</div></div>
+
+  <div class="template-box"><span class="template-label">65</span><div class="template-body">○○様
+貴重なお声をありがとうございます。
+今後も状態を見ながら改善のお手伝いをさせていただきます。</div></div>
+
+  <h3 class="sec-h2">【院内の雰囲気を褒められた場合】</h3>
+  <div class="template-box"><span class="template-label">66</span><div class="template-body">院内環境についてお褒めいただきありがとうございます。
+今後も安心してお過ごしいただける空間づくりに努めてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">67</span><div class="template-body">リラックスしてお過ごしいただけたとのことで安心いたしました。
+引き続き快適な院内環境を維持してまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">68</span><div class="template-body">温かいお言葉をありがとうございます。
+院内の雰囲気づくりにも力を入れておりますので大変励みになります。</div></div>
+
+  <div class="template-box"><span class="template-label">69</span><div class="template-body">快適にお過ごしいただけたようで嬉しく思います。
+今後も居心地の良い空間づくりを心がけてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">70</span><div class="template-body">院内環境へのご評価ありがとうございます。
+引き続き清潔で安心できる環境づくりを行ってまいります。</div></div>
+
+  <h3 class="sec-h2">【スタッフ対応を褒められた場合】</h3>
+  <div class="template-box"><span class="template-label">71</span><div class="template-body">スタッフへの温かいお言葉ありがとうございます。
+大変励みになります。
+今後も丁寧な対応を心がけてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">72</span><div class="template-body">スタッフの対応にご満足いただけたようで安心いたしました。
+今後も皆さまに安心してご来院いただけるよう努めます。</div></div>
+
+  <div class="template-box"><span class="template-label">73</span><div class="template-body">嬉しいご感想ありがとうございます。
+スタッフ一同で共有させていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">74</span><div class="template-body">温かいお言葉をいただきありがとうございます。
+今後も気持ちよく通っていただける対応を心がけてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">75</span><div class="template-body">スタッフへのお褒めのお言葉をありがとうございます。
+今後の励みとさせていただきます。</div></div>
+
+  <h3 class="sec-h2">【待ち時間への軽い指摘】</h3>
+  <div class="template-box"><span class="template-label">76</span><div class="template-body">ご来院ありがとうございました。
+また、お待たせしてしまい申し訳ございませんでした。
+今後はよりスムーズなご案内ができるよう改善してまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">77</span><div class="template-body">貴重なご意見をありがとうございます。
+お待ちいただく時間をできる限り減らせるよう努めてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">78</span><div class="template-body">この度はご不便をおかけし申し訳ございませんでした。
+いただいたご意見を院内で共有し改善に活かしてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">79</span><div class="template-body">率直なお声をありがとうございます。
+より快適にご利用いただける院づくりを進めてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">80</span><div class="template-body">貴重なご意見ありがとうございます。
+今後のサービス向上に役立ててまいります。</div></div>
+
+  <h3 class="sec-h2">【予約の取りづらさ】</h3>
+  <div class="template-box"><span class="template-label">81</span><div class="template-body">ご不便をおかけし申し訳ございません。
+できる限り多くの方にご利用いただけるよう改善を検討してまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">82</span><div class="template-body">ご予約について貴重なご意見ありがとうございます。
+今後も予約しやすい環境づくりに努めてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">83</span><div class="template-body">ご希望の日時でご案内できず申し訳ございませんでした。
+今後の運営改善に活かしてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">84</span><div class="template-body">率直なご意見ありがとうございます。
+よりスムーズな予約体制を目指してまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">85</span><div class="template-body">ご不便をおかけしましたことお詫び申し上げます。
+改善を重ねてまいります。</div></div>
+
+  <h3 class="sec-h2">【軽いクレーム対応】</h3>
+  <div class="template-box"><span class="template-label">86</span><div class="template-body">貴重なご意見をありがとうございます。
+真摯に受け止め、今後の改善に活かしてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">87</span><div class="template-body">ご期待に添えない点があり申し訳ございませんでした。
+よりご満足いただけるよう努めてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">88</span><div class="template-body">率直なお声をいただきありがとうございます。
+今後のサービス向上の参考とさせていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">89</span><div class="template-body">ご不快な思いをさせてしまい申し訳ございませんでした。
+院内で共有し改善に努めてまいります。</div></div>
+
+  <div class="template-box"><span class="template-label">90</span><div class="template-body">この度は貴重なご意見をありがとうございました。
+いただいたお声を真摯に受け止めてまいります。</div></div>
+
+  <h3 class="sec-h2">【紹介患者】</h3>
+  <div class="template-box"><span class="template-label">91</span><div class="template-body">ご紹介でご来院いただきありがとうございました。
+ご期待にお応えできたようで嬉しく思います。</div></div>
+
+  <div class="template-box"><span class="template-label">92</span><div class="template-body">ご紹介者様にも感謝申し上げます。
+今後もしっかりサポートさせていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">93</span><div class="template-body">ご縁をいただきありがとうございます。
+引き続きよろしくお願いいたします。</div></div>
+
+  <div class="template-box"><span class="template-label">94</span><div class="template-body">嬉しい口コミありがとうございます。
+ご紹介でのご来院に感謝しております。</div></div>
+
+  <div class="template-box"><span class="template-label">95</span><div class="template-body">今後も安心して通っていただける院を目指してまいります。</div></div>
+
+  <h3 class="sec-h2">【リピート患者向け】</h3>
+  <div class="template-box"><span class="template-label">96</span><div class="template-body">いつもご来院いただきありがとうございます。
+長くお身体を任せていただけることに感謝しております。</div></div>
+
+  <div class="template-box"><span class="template-label">97</span><div class="template-body">継続して通っていただきありがとうございます。
+今後も健康維持のお手伝いをさせていただきます。</div></div>
+
+  <div class="template-box"><span class="template-label">98</span><div class="template-body">いつも温かいお言葉をありがとうございます。
+スタッフ一同励みになっております。</div></div>
+
+  <div class="template-box"><span class="template-label">99</span><div class="template-body">長くご利用いただきありがとうございます。
+今後も安心して通える院づくりに努めます。</div></div>
+
+  <div class="template-box"><span class="template-label">100</span><div class="template-body">いつも当院をご利用いただきありがとうございます。
+これからも皆さまの健康をサポートできるよう努力してまいります。</div></div>
+
+  <div class="highlight-box"><strong>口コミ返信で絶対に守るべき5ルール</strong><br>
+  ① 返信率100%<br>
+  ② 72時間以内に返信<br>
+  ③ 症状名を自然に入れる<br>
+  ④ 感謝だけで終わらない<br>
+  ⑤ クレームには反論しない</div>
+</section>
+
+<!-- ===== BONUS 3 ===== -->
+<section class="chapter" id="bonus3">
+  <div class="appendix-header">
+    <p class="appendix-eyebrow">別冊特典 ③</p>
+    <h2 class="appendix-title">Googleマップ投稿ネタ365日大全</h2>
+  </div>
+
+  <h3 class="sec-h2">第1カテゴリ：症状解説ネタ100選</h3>
+  <table class="rule-table">
+    <thead><tr><th>No.</th><th>投稿テーマ</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>不眠になる本当の原因</td></tr>
+      <tr><td>2</td><td>夜中に目が覚める理由</td></tr>
+      <tr><td>3</td><td>朝起きても疲れが取れない理由</td></tr>
+      <tr><td>4</td><td>自律神経が乱れるサイン</td></tr>
+      <tr><td>5</td><td>頭痛が起きやすい人の特徴</td></tr>
+      <tr><td>6</td><td>肩こりが慢性化する理由</td></tr>
+      <tr><td>7</td><td>腰痛が改善しない理由</td></tr>
+      <tr><td>8</td><td>めまいと自律神経の関係</td></tr>
+      <tr><td>9</td><td>更年期と自律神経</td></tr>
+      <tr><td>10</td><td>冷え性と血流</td></tr>
+      <tr><td>11</td><td>美容鍼とは何か</td></tr>
+      <tr><td>12</td><td>顔のむくみの原因</td></tr>
+      <tr><td>13</td><td>たるみの原因</td></tr>
+      <tr><td>14</td><td>食いしばりと頭痛</td></tr>
+      <tr><td>15</td><td>ストレートネックとは</td></tr>
+      <tr><td>16</td><td>猫背と肩こり</td></tr>
+      <tr><td>17</td><td>デスクワーク疲労</td></tr>
+      <tr><td>18</td><td>眼精疲労と頭痛</td></tr>
+      <tr><td>19</td><td>スマホ首について</td></tr>
+      <tr><td>20</td><td>首こりと不眠</td></tr>
+      <tr><td>21〜100</td><td>不眠・自律神経・頭痛・肩こり・腰痛・美容鍼・更年期・妊活・冷え性・眼精疲労を10テーマずつ展開（合計100投稿）</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sec-h2">第2カテゴリ：患者事例ネタ100選</h3>
+  <table class="rule-table">
+    <thead><tr><th>No.</th><th>事例テーマ</th></tr></thead>
+    <tbody>
+      <tr><td>101</td><td>40代女性 不眠改善事例</td></tr>
+      <tr><td>102</td><td>30代男性 自律神経改善事例</td></tr>
+      <tr><td>103</td><td>50代女性 頭痛改善事例</td></tr>
+      <tr><td>104</td><td>20代女性 美容鍼体験談</td></tr>
+      <tr><td>105</td><td>60代男性 腰痛改善事例</td></tr>
+      <tr><td>106〜200</td><td>年代（20代〜70代）×性別×症状×改善経過×来院回数×感想を組み合わせて100投稿作成可能</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sec-h2">第3カテゴリ：院長ストーリー50選</h3>
+  <table class="rule-table">
+    <thead><tr><th>No.</th><th>ストーリーテーマ</th></tr></thead>
+    <tbody>
+      <tr><td>201</td><td>なぜ鍼灸師になったのか</td></tr>
+      <tr><td>202</td><td>開業した理由</td></tr>
+      <tr><td>203</td><td>初めて患者さんに感謝された話</td></tr>
+      <tr><td>204</td><td>忘れられない症例</td></tr>
+      <tr><td>205</td><td>鍼灸の魅力</td></tr>
+      <tr><td>206</td><td>院名の由来</td></tr>
+      <tr><td>207</td><td>学び続ける理由</td></tr>
+      <tr><td>208</td><td>勉強会参加レポート</td></tr>
+      <tr><td>209</td><td>最近学んだこと</td></tr>
+      <tr><td>210</td><td>開業当初の失敗談</td></tr>
+      <tr><td>211〜250</td><td>院長の価値観・仕事観・健康観・家族観をテーマに発信</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sec-h2">第4カテゴリ：季節ネタ50選</h3>
+  <table class="rule-table">
+    <thead><tr><th>No.</th><th>テーマ</th></tr></thead>
+    <tbody>
+      <tr><td>251</td><td>春の自律神経対策</td></tr>
+      <tr><td>252</td><td>花粉症と鍼灸</td></tr>
+      <tr><td>253</td><td>新生活ストレス対策</td></tr>
+      <tr><td>254</td><td>梅雨の不調対策</td></tr>
+      <tr><td>255</td><td>夏バテ予防</td></tr>
+      <tr><td>256</td><td>冷房疲れ対策</td></tr>
+      <tr><td>257</td><td>熱中症予防</td></tr>
+      <tr><td>258</td><td>秋の寒暖差疲労</td></tr>
+      <tr><td>259</td><td>冬の冷え対策</td></tr>
+      <tr><td>260</td><td>年末疲労対策</td></tr>
+      <tr><td>261〜300</td><td>各月4〜5投稿作成</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sec-h2">第5カテゴリ：Q&Aネタ65選</h3>
+  <table class="rule-table">
+    <thead><tr><th>No.</th><th>質問テーマ</th></tr></thead>
+    <tbody>
+      <tr><td>301</td><td>鍼は痛いですか？</td></tr>
+      <tr><td>302</td><td>お灸は熱いですか？</td></tr>
+      <tr><td>303</td><td>何回通えばいいですか？</td></tr>
+      <tr><td>304</td><td>保険は使えますか？</td></tr>
+      <tr><td>305</td><td>どんな服装で行けばいいですか？</td></tr>
+      <tr><td>306</td><td>初回は何分ですか？</td></tr>
+      <tr><td>307</td><td>美容鍼の頻度は？</td></tr>
+      <tr><td>308</td><td>妊娠中でも受けられますか？</td></tr>
+      <tr><td>309</td><td>不眠にも鍼灸は有効ですか？</td></tr>
+      <tr><td>310</td><td>頭痛薬と併用できますか？</td></tr>
+      <tr><td>311〜365</td><td>患者から実際によく聞かれる質問をまとめる（合計65投稿）</td></tr>
+    </tbody>
+  </table>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">100</div><div class="stat-label">症状解説ネタ</div></div>
+    <div class="stat-card"><div class="stat-num">100</div><div class="stat-label">患者事例ネタ</div></div>
+    <div class="stat-card"><div class="stat-num">50</div><div class="stat-label">院長ストーリー</div></div>
+    <div class="stat-card"><div class="stat-num">50</div><div class="stat-label">季節ネタ</div></div>
+    <div class="stat-card"><div class="stat-num">65</div><div class="stat-label">Q&Aネタ</div></div>
+    <div class="stat-card"><div class="stat-num">365</div><div class="stat-label">合計投稿数</div></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span class="footer-gold">Googleマップ集客完全攻略マニュアル｜鍼灸院MEO実践大全</span>
+  本マニュアルの内容は講座購入特典です。無断転載・二次配布はご遠慮ください。<br><br>
+  &copy; リバランス整顔美容鍼&trade;
+</footer>
+
+</body>
+</html>
